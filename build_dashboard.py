@@ -179,6 +179,16 @@ select:focus, input:focus { border-color: var(--orange); }
 .map-link { display: block; text-align: center; padding: 10px; margin-top: 2px; background: var(--orange); color: #000; font-weight: 700; font-size: 12px; text-decoration: none; border-radius: 3px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
 .map-link:hover { opacity: 0.88; }
 .no-results { padding: 40px 20px; text-align: center; color: var(--muted); font-size: 11px; line-height: 2; }
+#refresh-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(249,115,22,0.15); color: var(--orange);
+  border: 1px solid var(--orange-border); border-radius: 3px;
+  padding: 6px 12px; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  text-decoration: none; transition: background 0.15s; white-space: nowrap;
+}
+#refresh-btn:hover { background: rgba(249,115,22,0.28); }
+#refresh-btn svg { flex-shrink: 0; }
 </style>
 </head>
 <body>
@@ -194,7 +204,13 @@ select:focus, input:focus { border-color: var(--orange); }
   <div class="hdr-right">
     <span class="hdr-badge orange">NEW CONST ONLY</span>
     <span class="hdr-badge new" id="new-badge" style="display:none"></span>
-    <div class="hdr-date" id="hdr-date"></div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="hdr-date" id="hdr-date"></div>
+      <a id="refresh-btn" href="https://github.com/rwaydev-jnservice/jn-construction-leads/actions/workflows/weekly-update.yml" target="_blank" title="Run workflow on GitHub to fetch new permits">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        Update Now
+      </a>
+    </div>
   </div>
 </header>
 
@@ -275,7 +291,10 @@ var activeSource = '';
 // Header
 var lastUpdated = STATS.last_updated || '';
 var newCount = STATS.new_this_week || 0;
-document.getElementById('hdr-date').innerHTML = 'Last updated: ' + lastUpdated + '<br>Total: ' + STATS.total + ' permits';
+document.getElementById('hdr-date').innerHTML =
+  '<span style="color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:1px">Last updated</span><br>' +
+  '<span style="color:var(--text);font-size:12px;font-weight:600">' + lastUpdated + '</span>' +
+  '<span style="color:var(--muted)"> &middot; ' + STATS.total + ' total</span>';
 if (newCount > 0) {
   var nb = document.getElementById('new-badge');
   nb.textContent = newCount + ' NEW THIS WEEK';
