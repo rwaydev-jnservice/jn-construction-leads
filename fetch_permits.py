@@ -144,7 +144,7 @@ def fetch_cambridge(since_date):
     results = []
     try:
         where = f"Issue Date >= '{since_date}'"
-        url = f"https://data.cambridgema.gov/resource/9qm7-wbdc.json?$where=Issue%20Date%20%3E%3D%20%27{since_date}%27&$limit=5000"
+        url = "https://data.cambridgema.gov/resource/9qm7-wbdc.json?$limit=5000&$where=Issue_Date+%3E%3D+%27" + since_date + "%27"
         records = fetch_json(url)
         for r in records:
             try:
@@ -186,108 +186,6 @@ def fetch_cambridge(since_date):
     return results
 
 
-def fetch_accela(city_name, agency_code, since_date):
-    """
-    Fetch new construction permits from Accela Citizen Access portals.
-    Used by: Brookline, Newton, Malden, Everett, Salem, Medford, Watertown, Lynn, Arlington, Belmont.
-    Accela doesn't have a public API, so we scrape the public search page.
-    """
-    print(f"  Fetching {city_name} (Accela) since {since_date}...")
-    results = []
-    # Accela public search URL — searches for building permits by date range
-    base = f"https://aca-prod.accela.com/{agency_code}/Cap/CapHome.aspx?module=Building&TabName=Home"
-    search_url = (
-        f"https://aca-prod.accela.com/{agency_code}/Cap/CapList.aspx"
-        f"?module=Building&TabName=Building&capStatus=Issued"
-        f"&issuedDateFrom={since_date}&issuedDateTo=2099-12-31"
-    )
-    try:
-        import html as html_mod
-        import re
-        req = urllib.request.Request(search_url, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            "Accept": "text/html,application/xhtml+xml",
-        })
-        with urllib.request.urlopen(req, timeout=20) as r:
-            page = r.read().decode("utf-8", errors="replace")
-
-        # Parse permit rows from Accela HTML table
-        # Look for permit numbers and addresses in the result table
-        rows = re.findall(
-            r'CapID=([A-Z0-9\-]+)[^"]*"[^>]*>[^<]*</a>[^<]*<[^>]*>[^<]*</[^>]*>'
-            r'[^<]*<[^>]*>([^<]+)</[^>]*>'  # type
-            r'[^<]*<[^>]*>([^<]+)</[^>]*>'  # address
-            r'[^<]*<[^>]*>([^<]+)</[^>]*>'  # status
-            r'[^<]*<[^>]*>([^<]*)</[^>]*>'  # issued date
-            , page
-        )
-
-        # Simpler fallback: extract all permit numbers and addresses visible on page
-        permit_blocks = re.findall(
-            r'CapID=([A-Z0-9\-]+)[^>]*>.*?'
-            r'(?:New\s+Construction|Erect|New\s+Building|New\s+Dwelling)[^<]*.*?'
-            r'(\d+\s+[A-Z][A-Za-z\s]+(?:ST|AVE|RD|DR|LN|WAY|BLVD|CT|PL|TER|CIRCLE)[^<]*)',
-            page, re.IGNORECASE | re.DOTALL
-        )
-
-        for match in permit_blocks[:50]:
-            permit_id, address = match
-            address = html_mod.unescape(address.strip())
-            # Geocode via nominatim
-            try:
-                geo_url = (
-                    "https://nominatim.openstreetmap.org/search?"
-                    + urllib.parse.urlencode({
-                        "q": f"{address}, {city_name}, MA",
-                        "format": "json", "limit": 1
-                    })
-                )
-                geo_req = urllib.request.Request(geo_url, headers={"User-Agent": "JNServiceLeads/1.0"})
-                with urllib.request.urlopen(geo_req, timeout=10) as gr:
-                    geo = json.loads(gr.read())
-                if not geo: continue
-                lat, lon = float(geo[0]["lat"]), float(geo[0]["lon"])
-                d = haversine_miles(lat, lon)
-                if d > MAX_MILES: continue
-                results.append(enrich({
-                    "id": f"{agency_code[:3].upper()}-{permit_id}",
-                    "source": city_name,
-                    "permit_num": permit_id,
-                    "description": "New Construction",
-                    "address": f"{address}, {city_name}",
-                    "city": city_name,
-                    "lat": lat, "lon": lon,
-                    "issued_date": since_date,
-                    "valuation_num": 0,
-                    "applicant_name": "",
-                    "company_name": "",
-                    "comments": f"New construction permit from {city_name} Accela portal",
-                    "occ": "",
-                    "dist": d,
-                    "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                }))
-            except Exception as geo_e:
-                pass
-
-    except Exception as e:
-        print(f"    {city_name} Accela error: {e}")
-
-    print(f"  {city_name}: {len(results)} new permits")
-    return results
-
-
-# Accela cities within 35mi of Braintree with known agency codes
-ACCELA_CITIES = [
-    ("Brookline",  "BROOKLINE"),
-    ("Newton",     "NEWTON"),
-    ("Malden",     "MALDEN"),
-    ("Everett",    "EVERETT"),
-    ("Salem",      "SALEM"),
-    ("Medford",    "MEDFORD"),
-    ("Watertown",  "WATERTOWN"),
-    ("Arlington",  "ARLINGTON"),
-    ("Lynn",       "LYNN"),
-]
 
 
 def fetch_somerville(since_date):
@@ -296,7 +194,7 @@ def fetch_somerville(since_date):
     results = []
     try:
         subtypes = "','".join(NEW_CONST_SOMERVILLE_SUBTYPES)
-        url = f"https://data.somervillema.gov/resource/nneb-s3f7.json?$where=Issue%20Date%20%3E%3D%20%27{since_date}%27%20AND%20Application%20Type%20%3D%20%27Building%20Permit%27&$limit=5000"
+        url = "https://data.somervillema.gov/resource/nneb-s3f7.json?$limit=5000&$where=Issue_Date+%3E%3D+%27" + since_date + "%27+AND+Application_Type+%3D+%27Building+Permit%27"
         records = fetch_json(url)
         for r in records:
             subtype = safe(r.get("Application Subtype",""))
@@ -339,95 +237,6 @@ def fetch_somerville(since_date):
 
 
 
-def fetch_accela(city_name, agency_code, since_date):
-    """
-    Fetch new construction permits from Accela Citizen Access portals.
-    Scrapes the public search page — no API key needed.
-    Cities: Brookline, Newton, Malden, Everett, Salem, Medford, Watertown, Arlington, Lynn.
-    """
-    print(f"  Fetching {city_name} (Accela) since {since_date}...")
-    import re, html as html_mod
-    results = []
-    try:
-        search_url = (
-            f"https://aca-prod.accela.com/{agency_code}/Cap/CapList.aspx"
-            f"?module=Building&TabName=Building&capStatus=Issued"
-            f"&issuedDateFrom={since_date}&issuedDateTo=2099-12-31"
-        )
-        req = urllib.request.Request(search_url, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-            "Accept": "text/html,application/xhtml+xml",
-        })
-        with urllib.request.urlopen(req, timeout=20) as r:
-            page = r.read().decode("utf-8", errors="replace")
-
-        # Find permit rows — look for new construction keywords near permit IDs
-        permit_blocks = re.findall(
-            r'CapID=([A-Z0-9\-]+)[^>]*>.*?'
-            r'(?:New\s+Construction|Erect|New\s+Building|New\s+Dwelling|New\s+Resid)[^<]*.*?'
-            r'(\d+[\s\w]+(?:ST|AVE|RD|DR|LN|WAY|BLVD|CT|PL|TER|CIR)[A-Z\s]*)',
-            page, re.IGNORECASE | re.DOTALL
-        )
-
-        for permit_id, address in permit_blocks[:30]:
-            address = html_mod.unescape(address.strip())
-            try:
-                # Geocode via OpenStreetMap Nominatim (free, no key)
-                import time
-                time.sleep(1)  # rate limit
-                geo_url = (
-                    "https://nominatim.openstreetmap.org/search?"
-                    + urllib.parse.urlencode({
-                        "q": f"{address}, {city_name}, MA",
-                        "format": "json", "limit": 1
-                    })
-                )
-                geo_req = urllib.request.Request(geo_url, headers={"User-Agent": "JNServiceLeads/1.0 contact@jnservice.com"})
-                with urllib.request.urlopen(geo_req, timeout=10) as gr:
-                    geo = json.loads(gr.read())
-                if not geo: continue
-                lat, lon = float(geo[0]["lat"]), float(geo[0]["lon"])
-                d = haversine_miles(lat, lon)
-                if d > MAX_MILES: continue
-                results.append(enrich({
-                    "id": f"{agency_code[:3].upper()}-{permit_id}",
-                    "source": city_name,
-                    "permit_num": permit_id,
-                    "description": "New Construction",
-                    "address": f"{address}, {city_name}",
-                    "city": city_name,
-                    "lat": lat, "lon": lon,
-                    "issued_date": since_date,
-                    "valuation_num": 0,
-                    "applicant_name": "",
-                    "company_name": "",
-                    "comments": f"New construction permit scraped from {city_name} Accela portal",
-                    "occ": "",
-                    "dist": d,
-                    "fetched_at": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                }))
-            except Exception:
-                continue
-
-    except Exception as e:
-        print(f"    {city_name} Accela error: {e}")
-
-    print(f"  {city_name}: {len(results)} new permits")
-    return results
-
-
-# Accela cities within 35mi of Braintree
-ACCELA_CITIES = [
-    ("Brookline",  "BROOKLINE"),
-    ("Newton",     "NEWTON"),
-    ("Malden",     "MALDEN"),
-    ("Everett",    "EVERETT"),
-    ("Salem",      "SALEM"),
-    ("Medford",    "MEDFORD"),
-    ("Watertown",  "WATERTOWN"),
-    ("Arlington",  "ARLINGTON"),
-    ("Lynn",       "LYNN"),
-]
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
@@ -450,7 +259,7 @@ def main():
     # First run: fetch from May 1 2026
     # Subsequent runs: fetch from 8 days ago to catch any late-issued permits
     if not existing:
-        since_date = "2026-05-01"
+        since_date = "2026-05-01"  # First run: fetch from May 2026
         print(f"First run — fetching from {since_date}")
     else:
         since_date = (now - timedelta(days=8)).strftime("%Y-%m-%d")
@@ -462,12 +271,6 @@ def main():
     new_permits += fetch_boston(since_date)
     new_permits += fetch_cambridge(since_date)
     new_permits += fetch_somerville(since_date)
-    # Accela cities
-    for city_name, agency_code in ACCELA_CITIES:
-        try:
-            new_permits += fetch_accela(city_name, agency_code, since_date)
-        except Exception as e:
-            print(f"  {city_name} skipped: {e}")
 
     # Merge: add new, keep old
     added_count = 0
