@@ -1,12 +1,12 @@
 {
   "stats": {
     "total": 162,
-    "new_this_week": 9,
+    "new_this_week": 0,
     "boston": 106,
     "cambridge": 15,
     "somerville": 41,
-    "last_updated": "2026-06-15",
-    "fetch_window_start": "2026-06-07"
+    "last_updated": "2026-06-22",
+    "fetch_window_start": "2026-06-14"
   },
   "permits": [
     {
@@ -226,7 +226,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $906k",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -248,7 +248,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -270,7 +270,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.0M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -292,7 +292,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $6.4M | Very close \u2014 7.68mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -314,7 +314,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -336,7 +336,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $7.4M | Very close \u2014 6.08mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -358,7 +358,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $5.5M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -380,7 +380,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -402,7 +402,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $5.7M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -424,7 +424,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $390k",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -446,7 +446,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $390k",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -468,7 +468,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $2.0M | Very close \u2014 7.7mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -490,7 +490,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $19.5M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
@@ -512,7 +512,7 @@
       "fetched_at": "2026-06-08",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $13.0M | Very close \u2014 7.87mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-06-08"
     },
     {
