@@ -1,14 +1,102 @@
 {
   "stats": {
-    "total": 263,
-    "new_this_week": 14,
-    "boston": 207,
+    "total": 267,
+    "new_this_week": 4,
+    "boston": 211,
     "cambridge": 15,
     "somerville": 41,
-    "last_updated": "2026-08-31",
-    "fetch_window_start": "2026-08-23"
+    "last_updated": "2026-09-07",
+    "fetch_window_start": "2026-08-30"
   },
   "permits": [
+    {
+      "id": "BOS-ALT1873735",
+      "source": "Boston",
+      "permit_num": "ALT1873735",
+      "description": "Addition",
+      "address": "179 Gladstone ST, East Boston",
+      "city": "East Boston",
+      "lat": 42.38986001371143,
+      "lon": -71.00759238929331,
+      "issued_date": "2026-09-01",
+      "valuation_num": 56250.0,
+      "applicant_name": "",
+      "company_name": "",
+      "comments": "Construct a 10 x 12 single story 3 season porch",
+      "occ": "1-2FAM",
+      "dist": 12.55,
+      "fetched_at": "2026-09-07",
+      "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
+      "why_visit": "New construction \u2014 full scope of finishing trades needed",
+      "is_new": true,
+      "added_week": "2026-09-07"
+    },
+    {
+      "id": "BOS-COO1875670",
+      "source": "Boston",
+      "permit_num": "COO1875670",
+      "description": "Erect",
+      "address": "244 L ST, South Boston",
+      "city": "South Boston",
+      "lat": 42.329832299161176,
+      "lon": -71.03505679066828,
+      "issued_date": "2026-09-01",
+      "valuation_num": 4050002.0,
+      "applicant_name": "Matthew Brett Homegrown Builders LLC",
+      "company_name": "",
+      "comments": "7 Residential Units;with Below Ground Parking (14);Certificate for SameERT1495090 Issued 5/9/2024, A1694088 Issued 1/27/2026 &; SF1578073 Issued 3/19/2024",
+      "occ": "Multi",
+      "dist": 8.6,
+      "fetched_at": "2026-09-07",
+      "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
+      "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $4.1M",
+      "is_new": true,
+      "added_week": "2026-09-07"
+    },
+    {
+      "id": "BOS-ERT1675360",
+      "source": "Boston",
+      "permit_num": "ERT1675360",
+      "description": "Erect",
+      "address": "551-555 Beech ST, Roslindale",
+      "city": "Roslindale",
+      "lat": 42.27409494603389,
+      "lon": -71.13068909610898,
+      "issued_date": "2026-09-01",
+      "valuation_num": 1500000.0,
+      "applicant_name": "Sara Velardi",
+      "company_name": "",
+      "comments": "Construction of a new three-family residential building consisting of three townhouses Scope of work includes installation of fire alarm and sprinkler systems, a total of six parking spaces (two per dwelling unit with three designated as EV-ready), and a roof equipped with a solar-ready zone.;. E-pl",
+      "occ": "1-3FAM",
+      "dist": 8.17,
+      "fetched_at": "2026-09-07",
+      "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
+      "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.5M",
+      "is_new": true,
+      "added_week": "2026-09-07"
+    },
+    {
+      "id": "BOS-COO1889498",
+      "source": "Boston",
+      "permit_num": "COO1889498",
+      "description": "Erect",
+      "address": "58R Russell ST, Charlestown",
+      "city": "Charlestown",
+      "lat": 42.3797227889106,
+      "lon": -71.06674365656545,
+      "issued_date": "2026-08-31",
+      "valuation_num": 150000.0,
+      "applicant_name": "Hugh Meehan",
+      "company_name": "",
+      "comments": "One Dwelling UnitCertificate for SameERT1589263 Issued 3/25/2025",
+      "occ": "1-2FAM",
+      "dist": 12.35,
+      "fetched_at": "2026-09-07",
+      "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
+      "why_visit": "New construction \u2014 full scope of finishing trades needed",
+      "is_new": true,
+      "added_week": "2026-09-07"
+    },
     {
       "id": "BOS-COO1890047",
       "source": "Boston",
@@ -336,7 +424,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $15.0M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -358,7 +446,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.1M | Very close \u2014 7.5mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -380,7 +468,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.1M | Very close \u2014 7.49mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -402,7 +490,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.1M | Very close \u2014 7.48mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -424,7 +512,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $600k | Very close \u2014 7.37mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -446,7 +534,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $500k | Very close \u2014 6.87mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -468,7 +556,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $750k",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -490,7 +578,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $2.1M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -512,7 +600,7 @@
       "fetched_at": "2026-08-24",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $4.0M | Very close \u2014 7.22mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-08-24"
     },
     {
@@ -3061,7 +3149,7 @@
       "comments": "Single Family DwellingTemporary Certificate for Same Pending Closed GSA - Valid for 90 Days, To Expire 8/22/2026ERT1230851 Issued 1/6/2025",
       "occ": "1-2FAM",
       "dist": 6.43,
-      "fetched_at": "2026-05-25",
+      "fetched_at": "2026-09-07",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $482k | Very close \u2014 6.43mi from Braintree",
       "is_new": false,
@@ -3083,7 +3171,7 @@
       "comments": "Single Family DwellingTemporary Certificate for Same Pending Close; GSA Expires on 8/22/2026ERT1230739 Issued 2/25/25",
       "occ": "1-2FAM",
       "dist": 6.41,
-      "fetched_at": "2026-05-25",
+      "fetched_at": "2026-09-07",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Solid value \u2014 $482k | Very close \u2014 6.41mi from Braintree",
       "is_new": false,
