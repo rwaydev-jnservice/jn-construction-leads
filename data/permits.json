@@ -1,14 +1,36 @@
 {
   "stats": {
-    "total": 281,
-    "new_this_week": 14,
-    "boston": 225,
+    "total": 282,
+    "new_this_week": 1,
+    "boston": 226,
     "cambridge": 15,
     "somerville": 41,
-    "last_updated": "2026-09-21",
-    "fetch_window_start": "2026-09-13"
+    "last_updated": "2026-09-28",
+    "fetch_window_start": "2026-09-20"
   },
   "permits": [
+    {
+      "id": "BOS-COO1828664",
+      "source": "Boston",
+      "permit_num": "COO1828664",
+      "description": "Erect",
+      "address": "36 Sprague ST, Hyde Park",
+      "city": "Hyde Park",
+      "lat": 42.23609267742211,
+      "lon": -71.13601836540151,
+      "issued_date": "2026-09-22",
+      "valuation_num": 65116893.0,
+      "applicant_name": "Geoffrey S Caraboolad",
+      "company_name": "",
+      "comments": ";165 Residential Units Over Podium With on Grade Parking Building #2Temporary Certificate; for; Same Expires on 12/22/2026 Pending Completion of Article; 37ERT 1009695 Issued 5/14/24, A1628637 Issued 8/22/24",
+      "occ": "Other",
+      "dist": 7.33,
+      "fetched_at": "2026-09-28",
+      "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
+      "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $65.1M | Very close \u2014 7.33mi from Braintree",
+      "is_new": true,
+      "added_week": "2026-09-28"
+    },
     {
       "id": "BOS-ALT1836546",
       "source": "Boston",
@@ -3325,7 +3347,7 @@
       "comments": "Office, Multi-Family Condominiums, Parking, Retail, Amenity Spaces.Certificate for Base/Building Core/Shell Ground - 52nd floor, Core/Shell for (Offices, Retail,;Amenity Spaces), Parking Garage, Multi Family Condominiums Expires on 6/26/26 Pending Completion.ERT 611289 Issued 12/26/19, A 1556764 Iss",
       "occ": "Mixed",
       "dist": 10.25,
-      "fetched_at": "2026-06-29",
+      "fetched_at": "2026-09-28",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $531.8M",
       "is_new": false,
