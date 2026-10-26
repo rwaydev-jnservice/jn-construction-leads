@@ -1,12 +1,12 @@
 {
   "stats": {
     "total": 295,
-    "new_this_week": 13,
+    "new_this_week": 0,
     "boston": 239,
     "cambridge": 15,
     "somerville": 41,
-    "last_updated": "2026-10-19",
-    "fetch_window_start": "2026-10-11"
+    "last_updated": "2026-10-26",
+    "fetch_window_start": "2026-10-18"
   },
   "permits": [
     {
