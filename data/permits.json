@@ -1,12 +1,12 @@
 {
   "stats": {
     "total": 310,
-    "new_this_week": 4,
+    "new_this_week": 0,
     "boston": 254,
     "cambridge": 15,
     "somerville": 41,
-    "last_updated": "2026-11-09",
-    "fetch_window_start": "2026-11-01"
+    "last_updated": "2026-11-16",
+    "fetch_window_start": "2026-11-08"
   },
   "permits": [
     {
@@ -116,7 +116,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $3.2M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -138,7 +138,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $26.4M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -160,7 +160,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.2M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -182,7 +182,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $52.0M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -204,7 +204,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $40.0M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -226,7 +226,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $2.0M | Very close \u2014 6.69mi from Braintree",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -248,7 +248,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $5.7M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -270,7 +270,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -292,7 +292,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Electrical, Roofing, Masonry & Brickwork, Painting, Flooring, Drainage",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $9.8M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -314,7 +314,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed | Major project \u2014 $1.4M",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
@@ -336,7 +336,7 @@
       "fetched_at": "2026-11-02",
       "services_needed": "Carpentry, Roofing, Electrical, Painting, Flooring",
       "why_visit": "New construction \u2014 full scope of finishing trades needed",
-      "is_new": true,
+      "is_new": false,
       "added_week": "2026-11-02"
     },
     {
